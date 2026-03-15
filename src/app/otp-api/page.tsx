@@ -31,19 +31,19 @@ const endpoints = [
     method: 'POST',
     path: '/otp/send',
     description:
-      'Send an OTP code to a phone number via SMS. Requires phoneNumber, otp, and idempotencyKey in the request body.',
+      'Send an OTP code to a phone number via SMS. Requires phoneNumber and a variables object containing the otp (4-8 digits). templateId is optional if using the default template.',
   },
   {
     method: 'POST',
     path: '/otp/verify',
     description:
-      'Verify an OTP code entered by the user. Requires otpRequestId and otp in the request body.',
+      'Verify an OTP code entered by the user. Requires otpRequestId and the original otp code.',
   },
   {
     method: 'POST',
     path: '/otp/resend',
     description:
-      'Resend an OTP for an existing request. Generates a new OTP code and sends it to the same phone number.',
+      'Resend an OTP for an existing request. Generates a new OTP code if one wasn\'t provided or reuse the existing one.',
   },
 ];
 
@@ -61,7 +61,7 @@ const faqItems = [
   {
     question: 'What is the rate limit?',
     answer:
-      'The API is designed for production use with generous rate limits. Contact us if you need higher throughput for bulk sending.',
+      'We support a high throughput of 20 OTPs per second globally per account. Additionally, there is a security limit of 3 OTPs per 5 minutes per mobile number to prevent abuse.',
   },
   {
     question: 'Do you support webhooks for delivery status?',
@@ -198,10 +198,10 @@ export default function OtpApiPage() {
           <h2 className="text-lg font-semibold">Related Pages</h2>
           <div className="mt-4 flex flex-wrap gap-3">
             <Link
-              href="/otp-verification-api"
+              href="/otp-api"
               className="text-sm text-primary hover:underline"
             >
-              OTP Verification API
+              OTP API Docs
             </Link>
             <Link
               href="/bulk-otp-api"

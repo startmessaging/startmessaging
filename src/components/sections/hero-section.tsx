@@ -17,17 +17,20 @@ export function HeroSection() {
             <span>No DLT registration required</span>
           </div>
 
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-            Send OTPs Without{' '}
-            <span className="underline decoration-primary/50 decoration-2 underline-offset-4">
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
+            <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+              Send OTPs
+            </span>{' '}
+            Without{' '}
+            <span className="underline decoration-primary/50 decoration-4 underline-offset-8">
               DLT Registration
             </span>
           </h1>
 
-          <p className="mt-6 text-lg text-muted-foreground sm:text-xl">
-            The simplest OTP API for Indian developers. Get started in 5
-            minutes with a single API call. No DLT, no templates, no
-            hassle — just working OTPs at Rs 0.25 each.
+          <p className="mt-8 text-lg leading-8 text-muted-foreground sm:text-xl sm:leading-9">
+            The most developer-friendly OTP API for India. Authenticate users in minutes
+            with our high-delivery SMS infrastructure. 4-8 digit OTP support, 
+            multi-provider failover, and zero DLT registration — all at just ₹0.25 each.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
