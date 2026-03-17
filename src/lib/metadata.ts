@@ -28,7 +28,6 @@ export function createMetadata({
       'OTP API',
       'DLT free OTP',
       'send OTP without DLT',
-      'OTP verification API',
       'SMS OTP India',
       ...keywords,
     ],

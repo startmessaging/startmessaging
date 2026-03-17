@@ -115,8 +115,8 @@ export default function BulkOtpApiPage() {
             <Link href="/pricing" className="text-sm text-primary hover:underline">
               Pricing
             </Link>
-            <Link href="/otp-verification-api" className="text-sm text-primary hover:underline">
-              OTP Verification API
+            <Link href="/dlt-free-otp" className="text-sm text-primary hover:underline">
+              DLT Free OTP
             </Link>
           </div>
         </div>

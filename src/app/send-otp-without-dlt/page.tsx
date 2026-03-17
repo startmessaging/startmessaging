@@ -22,7 +22,7 @@ const steps = [
     step: 1,
     title: 'Create Your Account',
     description:
-      'Sign up at dashboard.startmessaging.com with your email. No company documents or KYC required to get started.',
+      'Sign up at app.startmessaging.com with your email. No company documents or KYC required to get started.',
   },
   {
     step: 2,
@@ -40,7 +40,7 @@ const steps = [
     step: 4,
     title: 'Send Your First OTP',
     description:
-      'Make a POST request to /otp/send with the phone number, OTP code, and an idempotency key. See the code examples below.',
+      'Make a POST request to /otp/send with the phone number and OTP code inside the variables object. See the code examples below.',
   },
   {
     step: 5,
@@ -62,9 +62,9 @@ const faqItems = [
       'Use E.164 format: country code + number. For India, that is +91 followed by the 10-digit mobile number. Example: +919876543210.',
   },
   {
-    question: 'What is an idempotency key?',
+    question: 'How many OTPs can I send per second?',
     answer:
-      'An idempotency key is a unique string (like a UUID) that you send with each OTP request. If you accidentally send the same request twice, the duplicate is ignored. This prevents users from receiving the same OTP multiple times.',
+      'We support up to 20 OTPs per second globally per account. This ensures high throughput for production applications during peak times.',
   },
   {
     question: 'How long does an OTP remain valid?',
@@ -142,10 +142,10 @@ export default function SendOtpWithoutDltPage() {
               OTP API Documentation
             </Link>
             <Link
-              href="/otp-verification-api"
+              href="/otp-api"
               className="text-sm text-primary hover:underline"
             >
-              OTP Verification API
+              OTP API Documentation
             </Link>
           </div>
         </div>

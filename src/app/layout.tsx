@@ -23,8 +23,21 @@ export const metadata: Metadata = {
     template: '%s | StartMessaging',
   },
   description:
-    'Send OTPs via SMS without DLT registration. Pay-as-you-go OTP API at Rs 0.25/OTP. Get started in 5 minutes with simple REST API.',
+    'Send OTPs via SMS without DLT registration. Pay-as-you-go OTP API at Rs 0.25/OTP. Get started in 5 minutes with a simple REST API and 4-8 digit OTP support.',
   metadataBase: new URL('https://startmessaging.com'),
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://startmessaging.com',
+    siteName: 'StartMessaging',
+    title: 'StartMessaging | DLT-Free OTP API for Indian Developers',
+    description: 'Send OTPs via SMS without DLT registration. Pay-as-you-go OTP API at Rs 0.25/OTP. Simple, fast, and reliable.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'StartMessaging | DLT-Free OTP API for Indian Developers',
+    description: 'The simplest OTP API for Indian developers. No DLT registration required.',
+  },
 };
 
 export default function RootLayout({

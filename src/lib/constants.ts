@@ -3,7 +3,7 @@ export const WHATSAPP_MESSAGE = 'Hi, I need help with StartMessaging';
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 export const DASHBOARD_URL =
-  process.env.NEXT_PUBLIC_DASHBOARD_URL || 'https://dashboard.startmessaging.com';
+  process.env.NEXT_PUBLIC_DASHBOARD_URL || 'https://app.startmessaging.com';
 export const API_DOCS_URL = 'https://api.startmessaging.com/api/docs';
 
 export const NAV_LINKS = [
@@ -12,6 +12,7 @@ export const NAV_LINKS = [
   { href: '/dlt-free-otp', label: 'DLT Free OTP' },
   { href: '/otp-api', label: 'API Docs' },
   { href: '/use-cases', label: 'Use Cases' },
+  { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ] as const;
 
@@ -21,12 +22,12 @@ export const FOOTER_LINKS = {
     { href: '/pricing', label: 'Pricing' },
     { href: '/otp-api', label: 'API Documentation' },
     { href: '/use-cases', label: 'Use Cases' },
+    { href: '/limits', label: 'API Limits' },
   ],
   solutions: [
     { href: '/dlt-free-otp', label: 'DLT Free OTP' },
     { href: '/send-otp-without-dlt', label: 'Send OTP Without DLT' },
     { href: '/bulk-otp-api', label: 'Bulk OTP API' },
-    { href: '/otp-verification-api', label: 'OTP Verification API' },
   ],
   company: [
     { href: '/about', label: 'About Us' },
@@ -41,8 +42,11 @@ export const CODE_SNIPPETS = {
   -H "X-API-Key: sm_live_your_api_key_here" \\
   -d '{
     "phoneNumber": "+919876543210",
-    "otp": "123456",
-    "idempotencyKey": "unique-request-id-123"
+    "templateId": "YOUR_TEMPLATE_ID",
+    "variables": {
+      "otp": "123456",
+      "appName": "YourApp"
+    }
   }'`,
   nodejs: `const response = await fetch("https://api.startmessaging.com/otp/send", {
   method: "POST",
@@ -52,8 +56,11 @@ export const CODE_SNIPPETS = {
   },
   body: JSON.stringify({
     phoneNumber: "+919876543210",
-    otp: "123456",
-    idempotencyKey: "unique-request-id-123",
+    templateId: "YOUR_TEMPLATE_ID",
+    variables: {
+      otp: "123456",
+      appName: "YourApp",
+    },
   }),
 });
 
@@ -69,8 +76,11 @@ response = requests.post(
     },
     json={
         "phoneNumber": "+919876543210",
-        "otp": "123456",
-        "idempotencyKey": "unique-request-id-123",
+        "templateId": "YOUR_TEMPLATE_ID",
+        "variables": {
+            "otp": "123456",
+            "appName": "YourApp"
+        },
     },
 )
 
@@ -87,8 +97,11 @@ curl_setopt_array($ch, [
     ],
     CURLOPT_POSTFIELDS => json_encode([
         "phoneNumber" => "+919876543210",
-        "otp" => "123456",
-        "idempotencyKey" => "unique-request-id-123",
+        "templateId" => "YOUR_TEMPLATE_ID",
+        "variables" => [
+            "otp" => "123456",
+            "appName" => "YourApp"
+        ]
     ]),
 ]);
 
@@ -102,7 +115,14 @@ import java.net.URI;
 HttpClient client = HttpClient.newHttpClient();
 
 String body = """
-    {"phoneNumber":"+919876543210","otp":"123456","idempotencyKey":"unique-request-id-123"}
+    {
+      "phoneNumber": "+919876543210",
+      "templateId": "YOUR_TEMPLATE_ID",
+      "variables": {
+        "otp": "123456",
+        "appName": "YourApp"
+      }
+    }
     """;
 
 HttpRequest request = HttpRequest.newBuilder()
@@ -125,10 +145,13 @@ import (
 )
 
 func main() {
-  payload, _ := json.Marshal(map[string]string{
-    "phoneNumber":    "+919876543210",
-    "otp":            "123456",
-    "idempotencyKey": "unique-request-id-123",
+  payload, _ := json.Marshal(map[string]interface{}{
+    "phoneNumber": "+919876543210",
+    "templateId":  "YOUR_TEMPLATE_ID",
+    "variables": map[string]string{
+      "otp":     "123456",
+      "appName": "YourApp",
+    },
   })
 
   req, _ := http.NewRequest("POST", "https://api.startmessaging.com/otp/send", bytes.NewBuffer(payload))
