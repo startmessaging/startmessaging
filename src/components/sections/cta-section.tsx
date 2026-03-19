@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button';
 import { DASHBOARD_URL } from '@/lib/constants';
 
 interface CtaSectionProps {
-  title?: string;
-  description?: string;
+  title?: React.ReactNode;
+  description?: React.ReactNode;
   primaryLabel?: string;
   primaryHref?: string;
   secondaryLabel?: string;
@@ -14,7 +14,11 @@ interface CtaSectionProps {
 
 export function CtaSection({
   title = 'Ready to Start Sending OTPs?',
-  description = 'Sign up for free, top up your wallet, and send your first OTP in under 5 minutes. No DLT registration needed.',
+  description = (
+    <>
+      Sign up for free, get <span className="font-semibold text-foreground">40 test messages credited instantly</span>, and send your first OTP in under 5 minutes. No DLT registration needed.
+    </>
+  ),
   primaryLabel = 'Get Started Free',
   primaryHref = DASHBOARD_URL,
   secondaryLabel = 'View Pricing',

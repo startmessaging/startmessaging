@@ -1,9 +1,18 @@
+import { getAllPosts } from '@/lib/blog';
 import type { MetadataRoute } from 'next';
 
 const BASE_URL = 'https://startmessaging.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastMajorUpdate = new Date('2026-03-15'); // Current development milestone
+  const lastMajorUpdate = new Date('2026-03-15'); 
+   const posts = getAllPosts();
+
+  const blogPostUrls: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt || post.publishedAt),
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }));
 
   return [
     {
@@ -62,5 +71,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.6,
     },
+    ...blogPostUrls,
   ];
 }

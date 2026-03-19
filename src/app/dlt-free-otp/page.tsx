@@ -60,22 +60,6 @@ const faqItems = [
 export default function DltFreeOtpPage() {
   return (
     <article>
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              DLT Free OTP API for India
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground">
-              TRAI&apos;s DLT registration takes weeks of paperwork and
-              approvals. StartMessaging lets you skip all of that and start
-              sending OTPs in minutes. We handle the DLT compliance — you focus
-              on your product.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <DltExplainer />
 
       <section className="bg-muted/40 py-20">

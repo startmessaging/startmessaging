@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { MessageSquare } from 'lucide-react';
+import { AppIcon } from '@/components/ui/app-icon';
 import { FOOTER_LINKS, DASHBOARD_URL } from '@/lib/constants';
 import { Separator } from '@/components/ui/separator';
 
@@ -11,7 +11,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 font-bold text-lg">
-              <MessageSquare className="h-5 w-5 text-primary" />
+              <AppIcon className="h-5 w-5 text-primary" />
               <span>StartMessaging</span>
             </Link>
             <p className="mt-3 text-sm text-muted-foreground">

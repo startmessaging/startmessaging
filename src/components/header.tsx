@@ -2,8 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, MessageSquare } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { AppIcon } from '@/components/ui/app-icon';
 import {
   Sheet,
   SheetContent,
@@ -24,7 +25,7 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg">
-          <MessageSquare className="h-6 w-6 text-primary" />
+          <AppIcon className="h-6 w-6 text-primary" />
           <span>StartMessaging</span>
         </Link>
 
@@ -66,10 +67,10 @@ export function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-72">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <SheetHeader>
                 <SheetTitle className="flex items-center gap-2">
-                  <MessageSquare className="h-5 w-5 text-primary" />
+                  <AppIcon className="h-5 w-5 text-primary" />
                   StartMessaging
                 </SheetTitle>
               </SheetHeader>

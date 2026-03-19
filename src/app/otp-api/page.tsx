@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = createMetadata({
   title: 'OTP API Documentation - REST API to Send & Verify OTPs',
   description:
-    'Complete REST API documentation for sending and verifying OTPs. Code examples in cURL, Node.js, Python, PHP, Java, and Go. Simple JSON API with idempotent sends.',
+    'Complete REST API documentation for sending OTPs and checking status. Code examples in cURL, Node.js, Python, PHP, Java, and Go. Simple JSON API with idempotent sends.',
   path: '/otp-api',
   keywords: [
     'OTP API',
@@ -31,19 +31,13 @@ const endpoints = [
     method: 'POST',
     path: '/otp/send',
     description:
-      'Send an OTP code to a phone number via SMS. Requires phoneNumber and a variables object containing the otp (4-8 digits). templateId is optional if using the default template.',
+      'Send a one-time password to a phone number. Fields: phoneNumber (E.164 format), templateId (optional), and variables (Must contain "otp" — a 4-6 digit code you generate, plus optional custom placeholders like "appName").',
   },
   {
-    method: 'POST',
-    path: '/otp/verify',
+    method: 'GET',
+    path: '/messages/:id',
     description:
-      'Verify an OTP code entered by the user. Requires otpRequestId and the original otp code.',
-  },
-  {
-    method: 'POST',
-    path: '/otp/resend',
-    description:
-      'Resend an OTP for an existing request. Generates a new OTP code if one wasn\'t provided or reuse the existing one.',
+      'Fetch the real-time delivery status of an OTP request. Statuses include initiated, queued, sent, delivered, and failed.',
   },
 ];
 
@@ -87,8 +81,8 @@ export default function OtpApiPage() {
               OTP API Documentation
             </h1>
             <p className="mt-6 text-lg text-muted-foreground">
-              A simple REST API to send and verify OTPs via SMS. One endpoint to
-              send, one to verify. Works with any language or framework.
+              A simple REST API to send OTPs via SMS and check delivery status. One endpoint to
+              send, one to check status. Works with any language or framework.
             </p>
           </div>
         </div>
@@ -162,34 +156,35 @@ export default function OtpApiPage() {
         </div>
       </section>
 
+      <CodeShowcase />
+
       {/* Response format */}
-      <section className="bg-muted/40 py-20">
+      <section className="bg-muted/40 pb-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
-            <h2 className="text-2xl font-bold">Response Format</h2>
-            <p className="mt-3 text-muted-foreground">
+            <h2 className="text-2xl font-bold text-center">Response Format</h2>
+            <p className="mt-3 text-muted-foreground text-center">
               All responses follow a consistent JSON envelope:
             </p>
             <div className="mt-4 rounded-lg border bg-card p-4">
               <pre className="overflow-x-auto text-sm">
                 <code className="font-mono">{`{
-  "success": true,
-  "statusCode": 201,
-  "requestId": "req_abc123",
-  "timestamp": "2026-02-15T10:30:00.000Z",
-  "data": {
-    "otpRequestId": "uuid-of-otp-request",
-    "messageId": "uuid-of-message",
-    "status": "queued"
-  }
-}`}</code>
+                    "success": true,
+                    "statusCode": 201,
+                    "requestId": "req_abc123",
+                    "timestamp": "2026-02-15T10:30:00.000Z",
+                    "data": {
+                      "otpRequestId": "uuid-of-otp-request",
+                      "messageId": "uuid-of-message",
+                      "status": "queued"
+                    }
+                  }`}
+                </code>
               </pre>
             </div>
           </div>
         </div>
       </section>
-
-      <CodeShowcase />
 
       <FaqSection title="API FAQ" items={faqItems} />
 

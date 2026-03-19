@@ -58,21 +58,7 @@ const detailedFeatures = [
 export default function FeaturesPage() {
   return (
     <article>
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Features Built for Developers
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground">
-              A complete OTP platform with everything you need — and nothing you
-              don&apos;t. Designed for Indian developers who value simplicity and
-              reliability.
-            </p>
-          </div>
-        </div>
-      </section>
-
+      <h1 className="sr-only">Features Built for Developers</h1>
       <FeaturesGrid />
 
       {/* Detailed features */}
