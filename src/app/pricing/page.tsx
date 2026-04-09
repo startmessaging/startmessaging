@@ -3,11 +3,12 @@ import Link from 'next/link';
 import { createMetadata } from '@/lib/metadata';
 import { productJsonLd } from '@/lib/jsonld';
 import { PricingSection, FaqSection, CtaSection } from '@/components/sections';
+import { PageStructuredData } from '@/components/structured-data';
 
 export const metadata: Metadata = createMetadata({
   title: 'Pricing - Pay As You Go OTP API at Rs 0.25/OTP',
   description:
-    'Simple pay-as-you-go pricing for OTP API. Rs 0.25 per OTP sent. No monthly fees, no subscriptions, no minimum balance. Top up your wallet and start sending.',
+    'Simple pay-as-you-go pricing for OTP API. Rs 0.25 per OTP sent. No monthly fees or subscriptions. Add funds in the dashboard and start sending.',
   path: '/pricing',
   keywords: [
     'OTP API pricing',
@@ -22,17 +23,12 @@ const faqItems = [
   {
     question: 'Is there a free tier?',
     answer:
-      'There is no free tier, but there are no monthly fees either. You only pay for OTPs you send at Rs 0.25 each. You can top up with any amount to get started.',
+      'There is no free tier, but there are no monthly fees either. You only pay for OTPs you send at Rs 0.25 each. Add funds from the dashboard to get started.',
   },
   {
     question: 'What payment methods do you accept?',
     answer:
       'We accept all major payment methods via Razorpay: UPI, credit cards, debit cards, netbanking, and wallets.',
-  },
-  {
-    question: 'Is there a minimum top-up amount?',
-    answer:
-      'There is no minimum top-up amount. Add as much or as little as you need.',
   },
   {
     question: 'Do unused credits expire?',
@@ -54,13 +50,12 @@ const faqItems = [
 export default function PricingPage() {
   return (
     <article>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(productJsonLd()),
-        }}
+      <PageStructuredData
+        path="/pricing"
+        faq={faqItems}
+        schemas={[productJsonLd()]}
       />
-      
+
       <h1 className="sr-only">Simple, Transparent Pricing</h1>
 
       <PricingSection />
@@ -115,7 +110,7 @@ export default function PricingPage() {
 
       <CtaSection
         title="Start Sending OTPs Today"
-        description="Sign up free, top up any amount, and pay only Rs 0.25 per OTP."
+        description="Sign up free, add funds in the dashboard, and pay only Rs 0.25 per OTP."
         secondaryLabel="View Features"
         secondaryHref="/features"
       />

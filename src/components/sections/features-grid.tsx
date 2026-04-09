@@ -45,7 +45,7 @@ const features = [
     icon: CreditCard,
     title: 'Pay As You Go',
     description:
-      'No monthly fees or commitments. Top up your wallet and pay Rs 0.25 per OTP sent.',
+      'No monthly fees. Add funds to your wallet and pay Rs 0.25 per OTP sent.',
   },
   {
     icon: Clock,

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { createMetadata } from '@/lib/metadata';
 import { CodeShowcase, FaqSection, CtaSection } from '@/components/sections';
+import { PageStructuredData } from '@/components/structured-data';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Layers, Zap, BarChart3, Shield } from 'lucide-react';
 
@@ -67,6 +68,7 @@ const faqItems = [
 export default function BulkOtpApiPage() {
   return (
     <article>
+      <PageStructuredData path="/bulk-otp-api" faq={faqItems} />
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">

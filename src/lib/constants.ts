@@ -33,6 +33,7 @@ export const FOOTER_LINKS = {
     { href: '/about', label: 'About Us' },
     { href: '/contact', label: 'Contact' },
     { href: '/blog', label: 'Blog' },
+    { href: '/refund-policy', label: 'Refund Policy' },
   ],
 } as const;
 

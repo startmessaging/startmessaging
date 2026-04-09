@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { createMetadata } from '@/lib/metadata';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { PageStructuredData } from '@/components/structured-data';
 import { Shield, Zap, Info } from 'lucide-react';
 
 export const metadata: Metadata = createMetadata({
@@ -12,6 +13,7 @@ export const metadata: Metadata = createMetadata({
 export default function LimitsPage() {
   return (
     <article className="py-20">
+      <PageStructuredData path="/limits" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">

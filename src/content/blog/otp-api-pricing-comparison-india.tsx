@@ -46,12 +46,12 @@ export const post: BlogPost = {
     {
       question: 'Is pay-as-you-go or a monthly plan cheaper?',
       answer:
-        'For volumes under 50,000 OTPs per month, pay-as-you-go is almost always cheaper because you avoid unused capacity. Monthly plans offer lower per-message rates but lock you into a minimum spend. StartMessaging uses a wallet model, which gives you pay-as-you-go flexibility with no minimum commitments.',
+        'For volumes under 50,000 OTPs per month, pay-as-you-go is almost always cheaper because you avoid unused capacity. Monthly plans offer lower per-message rates but often require a committed spend. StartMessaging uses a wallet model for pay-as-you-go flexibility.',
     },
     {
       question: 'How can I estimate my monthly OTP cost?',
       answer:
-        'Multiply your expected monthly OTP volume by the per-message rate. For StartMessaging: 10,000 OTPs x Rs 0.25 = Rs 2,500 per month. Add nothing for DLT, number rental, or platform fees. For other providers, add their monthly minimums, DLT costs, and any per-number or platform fees to get the true cost.',
+        'Multiply your expected monthly OTP volume by the per-message rate. For StartMessaging: 10,000 OTPs x Rs 0.25 = Rs 2,500 per month. Add nothing for DLT, number rental, or platform fees. For other providers, add their recurring platform or commitment fees, DLT costs, and any per-number charges to get the true cost.',
     },
   ],
   content: (
@@ -261,8 +261,8 @@ export const post: BlogPost = {
       </p>
       <ul>
         <li>
-          <strong>Advantages:</strong> No minimum commitments, no unused
-          capacity, complete cost control. You top up only when needed.
+          <strong>Advantages:</strong> No unused capacity from prepaid bundles,
+          complete cost control. You add funds when you need to send OTPs.
         </li>
         <li>
           <strong>Disadvantages:</strong> Requires proactive balance monitoring.
@@ -414,8 +414,8 @@ export const post: BlogPost = {
           registration, template approvals, and all TRAI requirements.
         </li>
         <li>
-          <strong>Monthly minimum:</strong> None. Send zero messages in a slow
-          month and pay nothing.
+          <strong>Billing:</strong> Pay-as-you-go. You are charged per OTP sent
+          from your wallet balance when you send messages.
         </li>
         <li>
           <strong>Platform fee:</strong> None.
@@ -448,9 +448,9 @@ export const post: BlogPost = {
       <ul>
         <li>
           <strong>Bootstrapped startup (under 10,000 OTPs/month):</strong> Choose
-          a provider with no monthly minimums and flat pricing. The wallet
-          model is ideal because you only pay for what you use. StartMessaging
-          fits this profile perfectly.
+          a provider with flat per-message pricing and a wallet or usage-based
+          model so you only pay for what you use. StartMessaging uses a prepaid
+          wallet with per-OTP pricing.
         </li>
         <li>
           <strong>Growing SaaS (10,000 &ndash; 100,000 OTPs/month):</strong>{' '}

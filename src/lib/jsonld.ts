@@ -1,4 +1,64 @@
-import { SITE_URL, SITE_NAME } from './metadata';
+import type { BreadcrumbItem } from './breadcrumbs';
+import { SITE_URL, SITE_NAME, SITE_OG_IMAGE } from './metadata';
+
+const PRODUCT_SKU = 'SM-OTP-API-INR';
+
+function merchantOfferFields() {
+  return {
+    availability: 'https://schema.org/InStock',
+    url: `${SITE_URL}/pricing`,
+    hasMerchantReturnPolicy: {
+      '@type': 'MerchantReturnPolicy',
+      applicableCountry: 'IN',
+      returnPolicyCategory:
+        'https://schema.org/MerchantReturnFiniteReturnWindow',
+      merchantReturnDays: 14,
+      merchantReturnLink: `${SITE_URL}/refund-policy`,
+      returnFees: 'https://schema.org/FreeReturn',
+      refundType: 'https://schema.org/FullRefund',
+    },
+    shippingDetails: {
+      '@type': 'OfferShippingDetails',
+      shippingRate: {
+        '@type': 'MonetaryAmount',
+        value: '0',
+        currency: 'INR',
+      },
+      shippingDestination: {
+        '@type': 'DefinedRegion',
+        addressCountry: 'IN',
+      },
+      deliveryTime: {
+        '@type': 'ShippingDeliveryTime',
+        handlingTime: {
+          '@type': 'QuantitativeValue',
+          minValue: 0,
+          maxValue: 0,
+          unitCode: 'DAY',
+        },
+        transitTime: {
+          '@type': 'QuantitativeValue',
+          minValue: 0,
+          maxValue: 1,
+          unitCode: 'MIN',
+        },
+      },
+    },
+  };
+}
+
+export function breadcrumbListJsonLd(items: BreadcrumbItem[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: `${SITE_URL}${item.path === '/' ? '' : item.path}`,
+    })),
+  };
+}
 
 export function organizationJsonLd() {
   return {
@@ -6,7 +66,11 @@ export function organizationJsonLd() {
     '@type': 'Organization',
     name: SITE_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
+    logo: {
+      '@type': 'ImageObject',
+      url: SITE_OG_IMAGE,
+    },
+    image: SITE_OG_IMAGE,
     description:
       'DLT-free OTP API for Indian developers. Send OTPs via SMS without DLT registration.',
     contactPoint: {
@@ -25,11 +89,16 @@ export function productJsonLd() {
     name: 'StartMessaging OTP API',
     description:
       'Pay-as-you-go OTP API for Indian developers. No DLT registration required.',
+    sku: PRODUCT_SKU,
+    image: [SITE_OG_IMAGE],
     brand: { '@type': 'Brand', name: SITE_NAME },
     offers: {
       '@type': 'Offer',
       price: '0.25',
       priceCurrency: 'INR',
+      priceValidUntil: '2027-12-31',
+      itemCondition: 'https://schema.org/NewCondition',
+      ...merchantOfferFields(),
       priceSpecification: {
         '@type': 'UnitPriceSpecification',
         price: '0.25',
@@ -62,12 +131,14 @@ export function softwareApplicationJsonLd() {
     name: 'StartMessaging OTP API',
     applicationCategory: 'DeveloperApplication',
     operatingSystem: 'Any',
+    image: SITE_OG_IMAGE,
     description:
       'RESTful API to send and verify OTPs via SMS. No DLT registration needed.',
     offers: {
       '@type': 'Offer',
       price: '0.25',
       priceCurrency: 'INR',
+      ...merchantOfferFields(),
     },
   };
 }
@@ -96,11 +167,13 @@ export function blogPostJsonLd(post: {
   updatedAt?: string;
   authorName: string;
 }) {
+  const imageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(post.title)}&desc=${encodeURIComponent(post.description)}`;
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.title,
     description: post.description,
+    image: [imageUrl],
     url: `${SITE_URL}/blog/${post.slug}`,
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
@@ -114,7 +187,7 @@ export function blogPostJsonLd(post: {
       url: SITE_URL,
       logo: {
         '@type': 'ImageObject',
-        url: `${SITE_URL}/logo.png`,
+        url: SITE_OG_IMAGE,
       },
     },
     mainEntityOfPage: {

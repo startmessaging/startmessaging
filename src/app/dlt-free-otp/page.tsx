@@ -8,6 +8,7 @@ import {
   FaqSection,
   CtaSection,
 } from '@/components/sections';
+import { PageStructuredData } from '@/components/structured-data';
 
 export const metadata: Metadata = createMetadata({
   title: 'DLT Free OTP - Send OTP Without DLT Registration',
@@ -60,6 +61,7 @@ const faqItems = [
 export default function DltFreeOtpPage() {
   return (
     <article>
+      <PageStructuredData path="/dlt-free-otp" faq={faqItems} />
       <DltExplainer />
 
       <section className="bg-muted/40 py-20">

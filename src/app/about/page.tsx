@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { createMetadata } from '@/lib/metadata';
 import { CtaSection } from '@/components/sections';
+import { PageStructuredData } from '@/components/structured-data';
 
 export const metadata: Metadata = createMetadata({
   title: 'About StartMessaging',
@@ -13,6 +14,7 @@ export const metadata: Metadata = createMetadata({
 export default function AboutPage() {
   return (
     <article>
+      <PageStructuredData path="/about" />
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
@@ -57,7 +59,8 @@ export default function AboutPage() {
                   <strong className="text-foreground">
                     Pay for what you use.
                   </strong>{' '}
-                  No monthly fees, no minimum commitments, no surprise charges.
+                  No monthly fees and no surprise charges—pay only for what you
+                  send.
                 </li>
                 <li>
                   <strong className="text-foreground">

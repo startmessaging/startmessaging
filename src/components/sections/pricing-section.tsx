@@ -37,7 +37,7 @@ export function PricingSection() {
                 <span className="text-muted-foreground"> / OTP</span>
               </div>
               <p className="mt-2 text-sm text-muted-foreground">
-                Top up any amount. No minimum balance.
+                Prepaid wallet. Pay Rs 0.25 per OTP from your balance.
               </p>
             </CardHeader>
             <CardContent>

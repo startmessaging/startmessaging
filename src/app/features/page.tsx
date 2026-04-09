@@ -6,6 +6,7 @@ import {
   ComparisonTable,
   CtaSection,
 } from '@/components/sections';
+import { PageStructuredData } from '@/components/structured-data';
 import {
   Card,
   CardContent,
@@ -58,6 +59,7 @@ const detailedFeatures = [
 export default function FeaturesPage() {
   return (
     <article>
+      <PageStructuredData path="/features" />
       <h1 className="sr-only">Features Built for Developers</h1>
       <FeaturesGrid />
 

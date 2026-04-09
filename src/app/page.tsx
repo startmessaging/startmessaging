@@ -7,6 +7,7 @@ import {
   FaqSection,
   CtaSection,
 } from '@/components/sections';
+import { PageStructuredData } from '@/components/structured-data';
 
 const homeFaq = [
   {
@@ -22,12 +23,12 @@ const homeFaq = [
   {
     question: 'How much does it cost?',
     answer:
-      'Each OTP costs Rs 0.25. There are no monthly fees, setup charges, or minimum commitments. You top up your wallet and pay only for what you send.',
+      'Each OTP costs Rs 0.25. There are no monthly fees or setup charges. Add funds to your wallet and pay only for what you send.',
   },
   {
     question: 'How fast can I get started?',
     answer:
-      'Under 5 minutes. Sign up, create an API key, top up your wallet, and make your first API call. No approval process or waiting period.',
+      'Under 5 minutes. Sign up, create an API key, add funds to your wallet, and make your first API call. No approval process or waiting period.',
   },
   {
     question: 'Which programming languages are supported?',
@@ -44,6 +45,7 @@ const homeFaq = [
 export default function HomePage() {
   return (
     <>
+      <PageStructuredData path="/" faq={homeFaq} />
       <HeroSection />
       <StatsSection />
       <FeaturesGrid />

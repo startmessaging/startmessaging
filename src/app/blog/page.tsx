@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BookOpen, CalendarDays } from "lucide-react";
 import { createMetadata } from "@/lib/metadata";
 import { blogListJsonLd } from "@/lib/jsonld";
+import { PageStructuredData } from "@/components/structured-data";
 import { getAllPosts } from "@/lib/blog";
 import { BLOG_CATEGORIES, type BlogCategory } from "@/types/blog";
 import { BlogCard, CategoryBadge, ReadingTime } from "@/components/blog";
@@ -48,12 +49,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(blogListJsonLd()),
-        }}
-      />
+      <PageStructuredData path="/blog" schemas={[blogListJsonLd()]} />
       <article>
         <section className="py-12 sm:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

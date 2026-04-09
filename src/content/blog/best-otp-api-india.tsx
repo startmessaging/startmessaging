@@ -392,7 +392,7 @@ const verification = await client.verify.v2
     {
       question: 'Which is the cheapest OTP API in India?',
       answer:
-        'StartMessaging offers OTPs at Rs 0.25 per message with no minimum commitment and INR wallet billing. This makes it the most affordable option for most Indian developers, especially at low to medium volumes.',
+        'StartMessaging offers OTPs at Rs 0.25 per message with INR wallet billing. This makes it the most affordable option for most Indian developers, especially at low to medium volumes.',
     },
     {
       question: 'Do I need DLT registration to send OTPs in India?',

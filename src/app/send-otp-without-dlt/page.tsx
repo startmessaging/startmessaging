@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { createMetadata } from '@/lib/metadata';
 import { CodeShowcase, FaqSection, CtaSection } from '@/components/sections';
+import { PageStructuredData } from '@/components/structured-data';
 
 export const metadata: Metadata = createMetadata({
   title: 'How to Send OTP Without DLT Registration - Step by Step Guide',
@@ -34,7 +35,7 @@ const steps = [
     step: 3,
     title: 'Top Up Your Wallet',
     description:
-      'Add funds to your wallet via Razorpay (UPI, cards, netbanking). Each OTP costs Rs 0.25. Top up any amount you want.',
+      'Add funds to your wallet via Razorpay (UPI, cards, netbanking). Each OTP costs Rs 0.25.',
   },
   {
     step: 4,
@@ -81,6 +82,7 @@ const faqItems = [
 export default function SendOtpWithoutDltPage() {
   return (
     <article>
+      <PageStructuredData path="/send-otp-without-dlt" faq={faqItems} />
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">

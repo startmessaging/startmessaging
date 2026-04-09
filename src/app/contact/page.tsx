@@ -3,6 +3,7 @@ import { createMetadata } from '@/lib/metadata';
 import { WHATSAPP_URL } from '@/lib/constants';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { PageStructuredData } from '@/components/structured-data';
 import { MessageCircle, Mail, Phone } from 'lucide-react';
 
 export const metadata: Metadata = createMetadata({
@@ -42,6 +43,7 @@ const contactMethods = [
 export default function ContactPage() {
   return (
     <article>
+      <PageStructuredData path="/contact" />
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">

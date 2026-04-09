@@ -40,7 +40,7 @@ export const post: BlogPost = {
     {
       question: 'How much does each OTP cost?',
       answer:
-        'Each OTP sent through StartMessaging costs Rs 0.25. There are no monthly fees, no minimum commitments, and no hidden charges. You only pay for what you send.',
+        'Each OTP sent through StartMessaging costs Rs 0.25. There are no monthly fees or hidden charges. You only pay for what you send.',
     },
     {
       question: 'Can I use this with TypeScript?',

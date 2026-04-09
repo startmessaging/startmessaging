@@ -3,6 +3,9 @@ import type { Metadata } from 'next';
 const SITE_URL = 'https://startmessaging.com';
 const SITE_NAME = 'StartMessaging';
 
+/** Default Open Graph image (absolute). Used in JSON-LD and metadata. */
+export const SITE_OG_IMAGE = `${SITE_URL}/api/og?title=${encodeURIComponent('StartMessaging')}&desc=${encodeURIComponent('DLT-Free OTP API for Indian Developers')}`;
+
 interface CreateMetadataOptions {
   title: string;
   description: string;

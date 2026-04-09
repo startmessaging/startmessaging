@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { createMetadata } from '@/lib/metadata';
 import { UseCaseCards, CtaSection } from '@/components/sections';
+import { PageStructuredData } from '@/components/structured-data';
 
 export const metadata: Metadata = createMetadata({
   title: 'OTP Use Cases - Login, 2FA, Payments & More',
@@ -20,7 +21,7 @@ export const metadata: Metadata = createMetadata({
 export default function UseCasesPage() {
   return (
     <article>
-
+      <PageStructuredData path="/use-cases" />
       <UseCaseCards />
 
       {/* Industry examples */}

@@ -81,8 +81,8 @@ export const post: BlogPost = {
         businesses and send more OTPs, your earnings grow with them.
       </p>
       <p>
-        The program is free to join. There is no minimum volume requirement to
-        start referring, and you do not need to be a paying StartMessaging
+        The program is free to join. You can start referring without hitting a
+        sales quota first, and you do not need to be a paying StartMessaging
         customer yourself. All you need is an account with a referral code.
       </p>
 
@@ -375,8 +375,8 @@ export const post: BlogPost = {
         </li>
       </ol>
       <p>
-        There is no application process, no approval wait time, and no minimum
-        volume commitment. Every StartMessaging user can start referring
+        There is no application process, no approval wait time, and no sales
+        quota to join. Every StartMessaging user can start referring
         immediately. The sooner you begin, the sooner your referrals start
         generating recurring income.
       </p>

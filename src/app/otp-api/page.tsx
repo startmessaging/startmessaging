@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { createMetadata } from '@/lib/metadata';
 import { softwareApplicationJsonLd } from '@/lib/jsonld';
 import { CodeShowcase, FaqSection, CtaSection } from '@/components/sections';
+import { PageStructuredData } from '@/components/structured-data';
 import { Badge } from '@/components/ui/badge';
 import {
   Card,
@@ -67,11 +68,10 @@ const faqItems = [
 export default function OtpApiPage() {
   return (
     <article>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(softwareApplicationJsonLd()),
-        }}
+      <PageStructuredData
+        path="/otp-api"
+        faq={faqItems}
+        schemas={[softwareApplicationJsonLd()]}
       />
 
       <section className="py-20">

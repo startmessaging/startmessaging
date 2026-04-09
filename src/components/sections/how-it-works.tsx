@@ -13,7 +13,7 @@ const steps = [
     step: '2',
     title: 'Top Up Your Wallet',
     description:
-      'Add funds to your wallet via Razorpay. No minimum amount, pay as you go.',
+      'Add funds to your wallet via Razorpay. Pay as you go for each OTP you send.',
   },
   {
     icon: Send,

@@ -30,6 +30,19 @@ import { post as smsReferralProgramGuide } from './sms-referral-program-guide';
 import { post as otpApiPricingComparisonIndia } from './otp-api-pricing-comparison-india';
 import { post as buildOtpSaasProduct } from './build-otp-saas-product';
 import { post as migrateSmsProviderChecklist } from './migrate-sms-provider-checklist';
+import { post as smsSenderIdIndiaOtpGuide } from './sms-sender-id-india-otp-guide';
+import { post as phoneVerificationAtScaleBestPractices } from './phone-verification-at-scale-best-practices';
+import { post as otpSmsDeliverabilityChecklist } from './otp-sms-deliverability-checklist';
+import { post as otpAutofillAndroidIosSmsRetriever } from './otp-autofill-android-ios-sms-retriever';
+import { post as smsOtpVsEmailMagicLinkVsTotp } from './sms-otp-vs-email-magic-link-vs-totp';
+import { post as payAsYouGoWalletInrSmsApi } from './pay-as-you-go-wallet-inr-sms-api';
+import { post as otpDeliveryStatusPollingVsWebhooks } from './otp-delivery-status-polling-vs-webhooks';
+import { post as testingOtpFlowsStagingSandboxes } from './testing-otp-flows-staging-sandboxes';
+import { post as smsApiKeyRotationDevelopers } from './sms-api-key-rotation-developers';
+import { post as voiceOtpVsSmsOtpIndia } from './voice-otp-vs-sms-otp-india';
+import { post as mobileAppOtpBackendReactNativeFlutter } from './mobile-app-otp-backend-react-native-flutter';
+import { post as otpMonitoringSlosErrorBudgets } from './otp-monitoring-slos-error-budgets';
+import { post as sendOtpJavaSpringBoot } from './send-otp-java-spring-boot';
 
 const posts: BlogPost[] = [
   sendOtpNodejs,
@@ -62,6 +75,19 @@ const posts: BlogPost[] = [
   otpApiPricingComparisonIndia,
   buildOtpSaasProduct,
   migrateSmsProviderChecklist,
+  smsSenderIdIndiaOtpGuide,
+  phoneVerificationAtScaleBestPractices,
+  otpSmsDeliverabilityChecklist,
+  otpAutofillAndroidIosSmsRetriever,
+  smsOtpVsEmailMagicLinkVsTotp,
+  payAsYouGoWalletInrSmsApi,
+  otpDeliveryStatusPollingVsWebhooks,
+  testingOtpFlowsStagingSandboxes,
+  smsApiKeyRotationDevelopers,
+  voiceOtpVsSmsOtpIndia,
+  mobileAppOtpBackendReactNativeFlutter,
+  otpMonitoringSlosErrorBudgets,
+  sendOtpJavaSpringBoot,
 ];
 
 // Sort by publishedAt descending (newest first)

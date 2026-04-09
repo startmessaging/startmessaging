@@ -67,6 +67,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
+      url: `${BASE_URL}/refund-policy`,
+      changeFrequency: 'yearly',
+      priority: 0.35,
+    },
+    {
       url: `${BASE_URL}/blog`,
       changeFrequency: 'weekly',
       priority: 0.6,
