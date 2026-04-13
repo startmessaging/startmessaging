@@ -43,6 +43,36 @@ import { post as voiceOtpVsSmsOtpIndia } from './voice-otp-vs-sms-otp-india';
 import { post as mobileAppOtpBackendReactNativeFlutter } from './mobile-app-otp-backend-react-native-flutter';
 import { post as otpMonitoringSlosErrorBudgets } from './otp-monitoring-slos-error-budgets';
 import { post as sendOtpJavaSpringBoot } from './send-otp-java-spring-boot';
+import { post as sendOtpGoGolang } from './send-otp-go-golang';
+import { post as sendOtpRubyOnRails } from './send-otp-ruby-on-rails';
+import { post as sendOtpDotnetCsharp } from './send-otp-dotnet-csharp';
+import { post as sendOtpNextjsAppRouter } from './send-otp-nextjs-app-router';
+import { post as sendOtpDjango } from './send-otp-django';
+import { post as sendOtpFlask } from './send-otp-flask';
+import { post as sendOtpKotlinAndroid } from './send-otp-kotlin-android';
+import { post as sendOtpSwiftIos } from './send-otp-swift-ios';
+import { post as sendOtpRustAxum } from './send-otp-rust-axum';
+import { post as sendOtpSupabaseEdgeFunctions } from './send-otp-supabase-edge-functions';
+import { post as fast2smsVsStartmessaging } from './fast2sms-vs-startmessaging';
+import { post as textlocalVsStartmessaging } from './textlocal-vs-startmessaging';
+import { post as exotelVsStartmessaging } from './exotel-vs-startmessaging';
+import { post as plivoVsStartmessaging } from './plivo-vs-startmessaging';
+import { post as vonageVsStartmessaging } from './vonage-vs-startmessaging';
+import { post as otpBotAttacksTrafficPumping } from './otp-bot-attacks-traffic-pumping';
+import { post as simSwapOtpProtectionIndia } from './sim-swap-otp-protection-india';
+import { post as otpSmishingPhishingPrevention } from './otp-smishing-phishing-prevention';
+import { post as rbi2fa2026Mandate } from './rbi-2fa-2026-mandate';
+import { post as silentAuthenticationVsOtpIndia } from './silent-authentication-vs-otp-india';
+import { post as dltTemplateVariablesRulesIndia } from './dlt-template-variables-rules-india';
+import { post as traiMessageScrubbingIndia } from './trai-message-scrubbing-india';
+import { post as unicodeRegionalLanguageSmsIndia } from './unicode-regional-language-sms-india';
+import { post as otpRealEstateIndia } from './otp-real-estate-india';
+import { post as otpGamingFantasyIndia } from './otp-gaming-fantasy-india';
+import { post as otpCryptoWeb3India } from './otp-crypto-web3-india';
+import { post as otpGovernmentCitizenServicesIndia } from './otp-government-citizen-services-india';
+import { post as otpHyperlocalServicesIndia } from './otp-hyperlocal-services-india';
+import { post as reduceSmsOtpCostIndia } from './reduce-sms-otp-cost-india';
+import { post as chooseOtpProviderStartupIndia } from './choose-otp-provider-startup-india';
 
 const posts: BlogPost[] = [
   sendOtpNodejs,
@@ -88,6 +118,36 @@ const posts: BlogPost[] = [
   mobileAppOtpBackendReactNativeFlutter,
   otpMonitoringSlosErrorBudgets,
   sendOtpJavaSpringBoot,
+  sendOtpGoGolang,
+  sendOtpRubyOnRails,
+  sendOtpDotnetCsharp,
+  sendOtpNextjsAppRouter,
+  sendOtpDjango,
+  sendOtpFlask,
+  sendOtpKotlinAndroid,
+  sendOtpSwiftIos,
+  sendOtpRustAxum,
+  sendOtpSupabaseEdgeFunctions,
+  fast2smsVsStartmessaging,
+  textlocalVsStartmessaging,
+  exotelVsStartmessaging,
+  plivoVsStartmessaging,
+  vonageVsStartmessaging,
+  otpBotAttacksTrafficPumping,
+  simSwapOtpProtectionIndia,
+  otpSmishingPhishingPrevention,
+  rbi2fa2026Mandate,
+  silentAuthenticationVsOtpIndia,
+  dltTemplateVariablesRulesIndia,
+  traiMessageScrubbingIndia,
+  unicodeRegionalLanguageSmsIndia,
+  otpRealEstateIndia,
+  otpGamingFantasyIndia,
+  otpCryptoWeb3India,
+  otpGovernmentCitizenServicesIndia,
+  otpHyperlocalServicesIndia,
+  reduceSmsOtpCostIndia,
+  chooseOtpProviderStartupIndia,
 ];
 
 // Sort by publishedAt descending (newest first)
