@@ -1,14 +1,14 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { createMetadata } from '@/lib/metadata';
-import { CtaSection } from '@/components/sections';
-import { PageStructuredData } from '@/components/structured-data';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { createMetadata } from "@/lib/metadata";
+import { CtaSection } from "@/components/sections";
+import { PageStructuredData } from "@/components/structured-data";
 
 export const metadata: Metadata = createMetadata({
-  title: 'About StartMessaging',
+  title: "About StartMessaging",
   description:
-    'StartMessaging is building the simplest OTP API for Indian developers. Our mission is to make phone verification accessible without DLT complexity.',
-  path: '/about',
+    "StartMessaging is building the simplest OTP API for Indian developers. Our mission is to make phone verification accessible without DLT complexity.",
+  path: "/about",
 });
 
 export default function AboutPage() {
@@ -51,27 +51,27 @@ export default function AboutPage() {
               <h2 className="text-2xl font-bold">What We Believe</h2>
               <ul className="mt-4 space-y-3 text-muted-foreground">
                 <li>
-                  <strong className="text-foreground">Simplicity wins.</strong>{' '}
+                  <strong className="text-foreground">Simplicity wins.</strong>{" "}
                   One POST request to send an OTP. One POST request to verify.
                   That&apos;s it.
                 </li>
                 <li>
                   <strong className="text-foreground">
                     Pay for what you use.
-                  </strong>{' '}
+                  </strong>{" "}
                   No monthly fees and no surprise charges—pay only for what you
                   send.
                 </li>
                 <li>
                   <strong className="text-foreground">
                     Security is not optional.
-                  </strong>{' '}
+                  </strong>{" "}
                   Bcrypt-hashed OTPs, SHA-256 API keys, HTTPS everywhere.
                 </li>
                 <li>
                   <strong className="text-foreground">
                     Reliability matters.
-                  </strong>{' '}
+                  </strong>{" "}
                   Multi-provider failover ensures your OTPs get delivered.
                 </li>
               </ul>
@@ -80,14 +80,11 @@ export default function AboutPage() {
             <div>
               <h2 className="text-2xl font-bold">Get in Touch</h2>
               <p className="mt-4 text-muted-foreground">
-                Have questions or want to learn more? Reach out via{' '}
-                <Link
-                  href="/contact"
-                  className="text-primary hover:underline"
-                >
+                Have questions or want to learn more? Reach out via{" "}
+                <Link href="/contact" className="text-primary hover:underline">
                   our contact page
-                </Link>{' '}
-                or message us on WhatsApp at +91-9034036789.
+                </Link>{" "}
+                or message us on WhatsApp at +91-6376383348.
               </p>
             </div>
           </div>

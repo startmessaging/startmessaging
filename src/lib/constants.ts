@@ -1,39 +1,39 @@
-export const WHATSAPP_NUMBER = '919034036789';
-export const WHATSAPP_MESSAGE = 'Hi, I need help with StartMessaging';
+export const WHATSAPP_NUMBER = "916376383348";
+export const WHATSAPP_MESSAGE = "Hi, I need help with StartMessaging";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 export const DASHBOARD_URL =
-  process.env.NEXT_PUBLIC_DASHBOARD_URL || 'https://app.startmessaging.com';
-export const API_DOCS_URL = 'https://api.startmessaging.com/api/docs';
+  process.env.NEXT_PUBLIC_DASHBOARD_URL || "https://app.startmessaging.com";
+export const API_DOCS_URL = "https://api.startmessaging.com/api/docs";
 
 export const NAV_LINKS = [
-  { href: '/features', label: 'Features' },
-  { href: '/pricing', label: 'Pricing' },
-  { href: '/dlt-free-otp', label: 'DLT Free OTP' },
-  { href: '/otp-api', label: 'API Docs' },
-  { href: '/use-cases', label: 'Use Cases' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact' },
+  { href: "/features", label: "Features" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/dlt-free-otp", label: "DLT Free OTP" },
+  { href: "/otp-api", label: "API Docs" },
+  { href: "/use-cases", label: "Use Cases" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 export const FOOTER_LINKS = {
   product: [
-    { href: '/features', label: 'Features' },
-    { href: '/pricing', label: 'Pricing' },
-    { href: '/otp-api', label: 'API Documentation' },
-    { href: '/use-cases', label: 'Use Cases' },
-    { href: '/limits', label: 'API Limits' },
+    { href: "/features", label: "Features" },
+    { href: "/pricing", label: "Pricing" },
+    { href: "/otp-api", label: "API Documentation" },
+    { href: "/use-cases", label: "Use Cases" },
+    { href: "/limits", label: "API Limits" },
   ],
   solutions: [
-    { href: '/dlt-free-otp', label: 'DLT Free OTP' },
-    { href: '/send-otp-without-dlt', label: 'Send OTP Without DLT' },
-    { href: '/bulk-otp-api', label: 'Bulk OTP API' },
+    { href: "/dlt-free-otp", label: "DLT Free OTP" },
+    { href: "/send-otp-without-dlt", label: "Send OTP Without DLT" },
+    { href: "/bulk-otp-api", label: "Bulk OTP API" },
   ],
   company: [
-    { href: '/about', label: 'About Us' },
-    { href: '/contact', label: 'Contact' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/refund-policy', label: 'Refund Policy' },
+    { href: "/about", label: "About Us" },
+    { href: "/contact", label: "Contact" },
+    { href: "/blog", label: "Blog" },
+    { href: "/refund-policy", label: "Refund Policy" },
   ],
 } as const;
 
@@ -168,10 +168,10 @@ func main() {
 } as const;
 
 export const LANGUAGE_TABS = [
-  { value: 'curl', label: 'cURL' },
-  { value: 'nodejs', label: 'Node.js' },
-  { value: 'python', label: 'Python' },
-  { value: 'php', label: 'PHP' },
-  { value: 'java', label: 'Java' },
-  { value: 'go', label: 'Go' },
+  { value: "curl", label: "cURL" },
+  { value: "nodejs", label: "Node.js" },
+  { value: "python", label: "Python" },
+  { value: "php", label: "PHP" },
+  { value: "java", label: "Java" },
+  { value: "go", label: "Go" },
 ] as const;
