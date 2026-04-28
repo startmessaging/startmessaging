@@ -1,42 +1,42 @@
-import type { Metadata } from 'next';
-import { createMetadata } from '@/lib/metadata';
-import { WHATSAPP_URL } from '@/lib/constants';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { PageStructuredData } from '@/components/structured-data';
-import { MessageCircle, Mail, Phone } from 'lucide-react';
+import type { Metadata } from "next";
+import { createMetadata } from "@/lib/metadata";
+import { WHATSAPP_URL } from "@/lib/constants";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { PageStructuredData } from "@/components/structured-data";
+import { MessageCircle, Mail, Phone } from "lucide-react";
 
 export const metadata: Metadata = createMetadata({
-  title: 'Contact Us',
+  title: "Contact Us",
   description:
-    'Get in touch with StartMessaging. Reach us via WhatsApp, email, or phone. We are here to help with your OTP API integration.',
-  path: '/contact',
+    "Get in touch with StartMessaging. Reach us via WhatsApp, email, or phone. We are here to help with your OTP API integration.",
+  path: "/contact",
 });
 
 const contactMethods = [
   {
     icon: MessageCircle,
-    title: 'WhatsApp',
-    description: 'Chat with us directly on WhatsApp for quick support.',
-    value: '+91-9034036789',
+    title: "WhatsApp",
+    description: "Chat with us directly on WhatsApp for quick support.",
+    value: "+91-6376383348",
     href: WHATSAPP_URL,
-    cta: 'Chat on WhatsApp',
+    cta: "Chat on WhatsApp",
   },
   {
     icon: Mail,
-    title: 'Email',
-    description: 'Send us an email for detailed inquiries or partnerships.',
-    value: 'support@startmessaging.com',
-    href: 'mailto:support@startmessaging.com',
-    cta: 'Send Email',
+    title: "Email",
+    description: "Send us an email for detailed inquiries or partnerships.",
+    value: "startmessagingdotcom@gmail.com",
+    href: "mailto:startmessagingdotcom@gmail.com",
+    cta: "Send Email",
   },
   {
     icon: Phone,
-    title: 'Phone',
-    description: 'Call us during business hours (Mon-Sat, 10am-7pm IST).',
-    value: '+91-9034036789',
-    href: 'tel:+919034036789',
-    cta: 'Call Us',
+    title: "Phone",
+    description: "Call us during business hours (Mon-Sat, 10am-7pm IST).",
+    value: "+91-6376383348",
+    href: "tel:+916376383348",
+    cta: "Call Us",
   },
 ];
 
@@ -71,12 +71,18 @@ export default function ContactPage() {
                   <p className="text-sm text-muted-foreground">
                     {method.description}
                   </p>
-                  <p className="font-mono text-sm">{method.value}</p>
+                  <p className="font-mono text-sm pr-2">{method.value}</p>
                   <Button variant="outline" size="sm" asChild>
                     <a
                       href={method.href}
-                      target={method.href.startsWith('http') ? '_blank' : undefined}
-                      rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      target={
+                        method.href.startsWith("http") ? "_blank" : undefined
+                      }
+                      rel={
+                        method.href.startsWith("http")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
                     >
                       {method.cta}
                     </a>
@@ -102,7 +108,9 @@ export default function ContactPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold">Do you offer enterprise support?</h3>
+                <h3 className="font-semibold">
+                  Do you offer enterprise support?
+                </h3>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Yes. Contact us for volume pricing, dedicated support, and
                   custom SLAs for high-volume senders.
