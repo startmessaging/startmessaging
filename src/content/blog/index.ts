@@ -74,6 +74,109 @@ import { post as otpHyperlocalServicesIndia } from './otp-hyperlocal-services-in
 import { post as reduceSmsOtpCostIndia } from './reduce-sms-otp-cost-india';
 import { post as chooseOtpProviderStartupIndia } from './choose-otp-provider-startup-india';
 
+// Batch 2026-04 — glossary, framework tutorials, troubleshooting, comparisons
+import { post as whatIsOtp } from './what-is-otp';
+import { post as whatIs2fa } from './what-is-2fa';
+import { post as whatIsMfa } from './what-is-mfa';
+import { post as whatIsTotp } from './what-is-totp';
+import { post as whatIsHotp } from './what-is-hotp';
+import { post as whatIsSmsGateway } from './what-is-sms-gateway';
+import { post as whatIsSmsApi } from './what-is-sms-api';
+import { post as whatIsSmsOtp } from './what-is-sms-otp';
+import { post as whatIsVoiceOtp } from './what-is-voice-otp';
+import { post as whatIsFlashCallAuth } from './what-is-flash-call-auth';
+import { post as whatIsSilentAuthentication } from './what-is-silent-authentication';
+import { post as whatIsDndSms } from './what-is-dnd-sms';
+import { post as whatIsSmsSenderId } from './what-is-sms-sender-id';
+import { post as sendOtpFastapi } from './send-otp-fastapi';
+import { post as sendOtpExpress } from './send-otp-express';
+import { post as sendOtpNestjs } from './send-otp-nestjs';
+import { post as sendOtpSveltekit } from './send-otp-sveltekit';
+import { post as howOtpWorksStepByStep } from './how-otp-works-step-by-step';
+import { post as cheapestOtpApiIndia2026 } from './cheapest-otp-api-india-2026';
+import { post as otpNotReceivedIndia } from './otp-not-received-india';
+
+// Batch 2 — industry / comparisons / compliance / tutorials / troubleshooting / security / advanced
+import { post as otpTravelHotelBookingIndia } from './otp-travel-hotel-booking-india';
+import { post as otpEventTicketingIndia } from './otp-event-ticketing-india';
+import { post as otpNbfcLoanAppsIndia } from './otp-nbfc-loan-apps-india';
+import { post as otpInsuranceAppsIndia } from './otp-insurance-apps-india';
+import { post as otpMatrimonyAppsIndia } from './otp-matrimony-apps-india';
+import { post as otpClassifiedsOlxIndia } from './otp-classifieds-olx-india';
+import { post as otpSalonSpaBookingIndia } from './otp-salon-spa-booking-india';
+import { post as otpGymFitnessAppsIndia } from './otp-gym-fitness-apps-india';
+import { post as otpSchoolCoachingAppsIndia } from './otp-school-coaching-apps-india';
+import { post as otpNgoDonorVerificationIndia } from './otp-ngo-donor-verification-india';
+import { post as otpStockBrokingAppsIndia } from './otp-stock-broking-apps-india';
+import { post as otpMutualFundAppsIndia } from './otp-mutual-fund-apps-india';
+import { post as otpDatingAppsIndia } from './otp-dating-apps-india';
+import { post as otpJobPortalIndia } from './otp-job-portal-india';
+import { post as otpCoworkingMembershipIndia } from './otp-coworking-membership-india';
+import { post as freeOtpApiIndiaSafe } from './free-otp-api-india-safe';
+import { post as otpApiWithoutKycIndia } from './otp-api-without-kyc-india';
+import { post as otpApiNoMonthlyFeesIndia } from './otp-api-no-monthly-fees-india';
+import { post as gupshupVsStartmessaging } from './gupshup-vs-startmessaging';
+import { post as infobipVsStartmessaging } from './infobip-vs-startmessaging';
+import { post as solutionsInfiniVsStartmessaging } from './solutions-infini-vs-startmessaging';
+import { post as kaleyraVsStartmessaging } from './kaleyra-vs-startmessaging';
+import { post as clickatellVsStartmessaging } from './clickatell-vs-startmessaging';
+import { post as bulksmsVsStartmessaging } from './bulksms-vs-startmessaging';
+import { post as dltRegistrationStepByStepIndia } from './dlt-registration-step-by-step-india';
+import { post as peidRegistrationIndia } from './peid-registration-india';
+import { post as traiOtpRules2026Update } from './trai-otp-rules-2026-update';
+import { post as dpdpActOtpComplianceIndia } from './dpdp-act-otp-compliance-india';
+import { post as rbiAfaGuidelinesOtp2026 } from './rbi-afa-guidelines-otp-2026';
+import { post as sebi2faTradingAppsIndia } from './sebi-2fa-trading-apps-india';
+import { post as irdaiOtpRulesInsuranceIndia } from './irdai-otp-rules-insurance-india';
+import { post as uidaiAadhaarOtpRules } from './uidai-aadhaar-otp-rules';
+import { post as gdprOtpIndiaEuCustomers } from './gdpr-otp-india-eu-customers';
+import { post as pciDssOtpIndia } from './pci-dss-otp-india';
+import { post as sendOtpRemix } from './send-otp-remix';
+import { post as sendOtpAstro } from './send-otp-astro';
+import { post as sendOtpNuxt } from './send-otp-nuxt';
+import { post as sendOtpHono } from './send-otp-hono';
+import { post as sendOtpBun } from './send-otp-bun';
+import { post as sendOtpDeno } from './send-otp-deno';
+import { post as sendOtpCloudflareWorkers } from './send-otp-cloudflare-workers';
+import { post as sendOtpAwsLambda } from './send-otp-aws-lambda';
+import { post as sendOtpVercelFunctions } from './send-otp-vercel-functions';
+import { post as sendOtpSymfony } from './send-otp-symfony';
+import { post as sendOtpCodeigniter } from './send-otp-codeigniter';
+import { post as sendOtpWordpress } from './send-otp-wordpress';
+import { post as sendOtpShopify } from './send-otp-shopify';
+import { post as sendOtpFirebaseFunctions } from './send-otp-firebase-functions';
+import { post as sendOtpGoogleCloudRun } from './send-otp-google-cloud-run';
+import { post as sendOtpFlutterFirebase } from './send-otp-flutter-firebase';
+import { post as sendOtpReactNativeExpo } from './send-otp-react-native-expo';
+import { post as sendOtpIonic } from './send-otp-ionic';
+import { post as sendOtpJetpackCompose } from './send-otp-jetpack-compose';
+import { post as sendOtpSwiftui } from './send-otp-swiftui';
+import { post as sendOtpElectronDesktop } from './send-otp-electron-desktop';
+import { post as otpDeliveryDelayFix } from './otp-delivery-delay-fix';
+import { post as otpFailingJioAirtelVi } from './otp-failing-jio-airtel-vi';
+import { post as otpGoingToSpamFix } from './otp-going-to-spam-fix';
+import { post as otpRateLimitErrorFix } from './otp-rate-limit-error-fix';
+import { post as dltTemplateRejectedFix } from './dlt-template-rejected-fix';
+import { post as internationalOtpNotDelivering } from './international-otp-not-delivering';
+import { post as duplicateOtpIssueFix } from './duplicate-otp-issue-fix';
+import { post as otp160CharacterLimitFix } from './otp-160-character-limit-fix';
+import { post as unicodeOtpEncodingIssue } from './unicode-otp-encoding-issue';
+import { post as isOtpSecureStrengthsWeaknesses } from './is-otp-secure-strengths-weaknesses';
+import { post as otpVsPasswordWhichSafer } from './otp-vs-password-which-safer';
+import { post as testOtpLocallyWithoutSmsCost } from './test-otp-locally-without-sms-cost';
+import { post as otpDatabaseSchemaBestPractices } from './otp-database-schema-best-practices';
+import { post as otpRedisVsSqlStorage } from './otp-redis-vs-sql-storage';
+import { post as shouldYouHashOtpInDatabase } from './should-you-hash-otp-in-database';
+import { post as otpSessionManagementBestPractices } from './otp-session-management-best-practices';
+import { post as otpResendCooldownImplementation } from './otp-resend-cooldown-implementation';
+import { post as otpFailedAttemptLockoutStrategies } from './otp-failed-attempt-lockout-strategies';
+import { post as webhooksOtpDeliveryStatusGuide } from './webhooks-otp-delivery-status-guide';
+import { post as loadTestingOtpEndpointsK6Locust } from './load-testing-otp-endpoints-k6-locust';
+import { post as circuitBreakerPatternOtpServices } from './circuit-breaker-pattern-otp-services';
+import { post as multiRegionFailoverOtpApi } from './multi-region-failover-otp-api';
+import { post as otpOutagePostmortemTemplate } from './otp-outage-postmortem-template';
+import { post as whatIsSmsTps } from './what-is-sms-tps';
+
 const posts: BlogPost[] = [
   sendOtpNodejs,
   sendOtpPython,
@@ -148,6 +251,105 @@ const posts: BlogPost[] = [
   otpHyperlocalServicesIndia,
   reduceSmsOtpCostIndia,
   chooseOtpProviderStartupIndia,
+  whatIsOtp,
+  whatIs2fa,
+  whatIsMfa,
+  whatIsTotp,
+  whatIsHotp,
+  whatIsSmsGateway,
+  whatIsSmsApi,
+  whatIsSmsOtp,
+  whatIsVoiceOtp,
+  whatIsFlashCallAuth,
+  whatIsSilentAuthentication,
+  whatIsDndSms,
+  whatIsSmsSenderId,
+  sendOtpFastapi,
+  sendOtpExpress,
+  sendOtpNestjs,
+  sendOtpSveltekit,
+  howOtpWorksStepByStep,
+  cheapestOtpApiIndia2026,
+  otpNotReceivedIndia,
+  otpTravelHotelBookingIndia,
+  otpEventTicketingIndia,
+  otpNbfcLoanAppsIndia,
+  otpInsuranceAppsIndia,
+  otpMatrimonyAppsIndia,
+  otpClassifiedsOlxIndia,
+  otpSalonSpaBookingIndia,
+  otpGymFitnessAppsIndia,
+  otpSchoolCoachingAppsIndia,
+  otpNgoDonorVerificationIndia,
+  otpStockBrokingAppsIndia,
+  otpMutualFundAppsIndia,
+  otpDatingAppsIndia,
+  otpJobPortalIndia,
+  otpCoworkingMembershipIndia,
+  freeOtpApiIndiaSafe,
+  otpApiWithoutKycIndia,
+  otpApiNoMonthlyFeesIndia,
+  gupshupVsStartmessaging,
+  infobipVsStartmessaging,
+  solutionsInfiniVsStartmessaging,
+  kaleyraVsStartmessaging,
+  clickatellVsStartmessaging,
+  bulksmsVsStartmessaging,
+  dltRegistrationStepByStepIndia,
+  peidRegistrationIndia,
+  traiOtpRules2026Update,
+  dpdpActOtpComplianceIndia,
+  rbiAfaGuidelinesOtp2026,
+  sebi2faTradingAppsIndia,
+  irdaiOtpRulesInsuranceIndia,
+  uidaiAadhaarOtpRules,
+  gdprOtpIndiaEuCustomers,
+  pciDssOtpIndia,
+  sendOtpRemix,
+  sendOtpAstro,
+  sendOtpNuxt,
+  sendOtpHono,
+  sendOtpBun,
+  sendOtpDeno,
+  sendOtpCloudflareWorkers,
+  sendOtpAwsLambda,
+  sendOtpVercelFunctions,
+  sendOtpSymfony,
+  sendOtpCodeigniter,
+  sendOtpWordpress,
+  sendOtpShopify,
+  sendOtpFirebaseFunctions,
+  sendOtpGoogleCloudRun,
+  sendOtpFlutterFirebase,
+  sendOtpReactNativeExpo,
+  sendOtpIonic,
+  sendOtpJetpackCompose,
+  sendOtpSwiftui,
+  sendOtpElectronDesktop,
+  otpDeliveryDelayFix,
+  otpFailingJioAirtelVi,
+  otpGoingToSpamFix,
+  otpRateLimitErrorFix,
+  dltTemplateRejectedFix,
+  internationalOtpNotDelivering,
+  duplicateOtpIssueFix,
+  otp160CharacterLimitFix,
+  unicodeOtpEncodingIssue,
+  isOtpSecureStrengthsWeaknesses,
+  otpVsPasswordWhichSafer,
+  testOtpLocallyWithoutSmsCost,
+  otpDatabaseSchemaBestPractices,
+  otpRedisVsSqlStorage,
+  shouldYouHashOtpInDatabase,
+  otpSessionManagementBestPractices,
+  otpResendCooldownImplementation,
+  otpFailedAttemptLockoutStrategies,
+  webhooksOtpDeliveryStatusGuide,
+  loadTestingOtpEndpointsK6Locust,
+  circuitBreakerPatternOtpServices,
+  multiRegionFailoverOtpApi,
+  otpOutagePostmortemTemplate,
+  whatIsSmsTps,
 ];
 
 // Sort by publishedAt descending (newest first)

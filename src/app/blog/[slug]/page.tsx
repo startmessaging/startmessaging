@@ -41,6 +41,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     publishedAt: post.publishedAt,
     updatedAt: post.updatedAt,
     authorName: post.author.name,
+    category: post.category,
+    keywords: post.keywords,
+    readingTime: post.readingTime,
   });
 
   return (

@@ -9,3 +9,4 @@ export { ComparisonTable } from './comparison-table';
 export { HowItWorks } from './how-it-works';
 export { DltExplainer } from './dlt-explainer';
 export { UseCaseCards } from './use-case-cards';
+export { PopularGuides } from './popular-guides';

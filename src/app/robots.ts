@@ -5,10 +5,18 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: ['/', '/api/og'],
+        allow: [
+          '/',
+          '/api/og',
+          '/feed.xml',
+          '/atom.xml',
+          '/llms.txt',
+          '/manifest.webmanifest',
+        ],
         disallow: '/api/',
       },
     ],
     sitemap: 'https://startmessaging.com/sitemap.xml',
+    host: 'https://startmessaging.com',
   };
 }

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BookOpen, CalendarDays } from "lucide-react";
 import { createMetadata } from "@/lib/metadata";
-import { blogListJsonLd } from "@/lib/jsonld";
+import { blogListJsonLd, itemListJsonLd } from "@/lib/jsonld";
+import { SITE_URL } from "@/lib/metadata";
 import { PageStructuredData } from "@/components/structured-data";
 import { getAllPosts } from "@/lib/blog";
 import { BLOG_CATEGORIES, type BlogCategory } from "@/types/blog";
@@ -47,9 +48,19 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       })
     : "";
 
+  const itemList = itemListJsonLd(
+    filteredPosts.slice(0, 30).map((p) => ({
+      name: p.title,
+      url: `${SITE_URL}/blog/${p.slug}`,
+    })),
+  );
+
   return (
     <>
-      <PageStructuredData path="/blog" schemas={[blogListJsonLd()]} />
+      <PageStructuredData
+        path="/blog"
+        schemas={[blogListJsonLd(), itemList]}
+      />
       <article>
         <section className="py-12 sm:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
