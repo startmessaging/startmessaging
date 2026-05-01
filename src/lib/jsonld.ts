@@ -65,6 +65,7 @@ export function organizationJsonLd() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: SITE_NAME,
+    legalName: "StartMessaging",
     url: SITE_URL,
     logo: {
       "@type": "ImageObject",
@@ -73,13 +74,58 @@ export function organizationJsonLd() {
     image: SITE_OG_IMAGE,
     description:
       "DLT-free OTP API for Indian developers. Send OTPs via SMS without DLT registration.",
+    foundingDate: "2024-01-01",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "IN",
+      addressRegion: "Rajasthan",
+    },
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+91-6376383348",
       contactType: "customer service",
       availableLanguage: ["English", "Hindi"],
+      areaServed: "IN",
     },
   };
+}
+
+export function websiteJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    alternateName: "Start Messaging",
+    url: SITE_URL,
+    inLanguage: "en-IN",
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+  };
+}
+
+export function siteNavigationJsonLd() {
+  const items = [
+    { name: "OTP API", url: `${SITE_URL}/otp-api` },
+    { name: "DLT Free OTP", url: `${SITE_URL}/dlt-free-otp` },
+    { name: "Send OTP Without DLT", url: `${SITE_URL}/send-otp-without-dlt` },
+    { name: "Bulk OTP API", url: `${SITE_URL}/bulk-otp-api` },
+    { name: "Pricing", url: `${SITE_URL}/pricing` },
+    { name: "Features", url: `${SITE_URL}/features` },
+    { name: "Use Cases", url: `${SITE_URL}/use-cases` },
+    { name: "API Limits", url: `${SITE_URL}/limits` },
+    { name: "Blog", url: `${SITE_URL}/blog` },
+    { name: "About", url: `${SITE_URL}/about` },
+    { name: "Contact", url: `${SITE_URL}/contact` },
+  ];
+  return items.map((item) => ({
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    name: item.name,
+    url: item.url,
+  }));
 }
 
 export function productJsonLd() {
@@ -166,6 +212,10 @@ export function blogPostJsonLd(post: {
   publishedAt: string;
   updatedAt?: string;
   authorName: string;
+  category?: string;
+  keywords?: string[];
+  wordCount?: number;
+  readingTime?: number;
 }) {
   const imageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(post.title)}&desc=${encodeURIComponent(post.description)}`;
   return {
@@ -177,9 +227,21 @@ export function blogPostJsonLd(post: {
     url: `${SITE_URL}/blog/${post.slug}`,
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
+    inLanguage: "en-IN",
+    ...(post.category ? { articleSection: post.category } : {}),
+    ...(post.keywords && post.keywords.length
+      ? { keywords: post.keywords.join(", ") }
+      : {}),
+    ...(post.wordCount ? { wordCount: post.wordCount } : {}),
+    ...(post.readingTime
+      ? {
+          timeRequired: `PT${post.readingTime}M`,
+        }
+      : {}),
     author: {
-      "@type": "Person",
+      "@type": "Organization",
       name: post.authorName,
+      url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
@@ -194,5 +256,41 @@ export function blogPostJsonLd(post: {
       "@type": "WebPage",
       "@id": `${SITE_URL}/blog/${post.slug}`,
     },
+  };
+}
+
+export function howToJsonLd(opts: {
+  name: string;
+  description: string;
+  url: string;
+  totalTime?: string;
+  steps: { name: string; text: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: opts.name,
+    description: opts.description,
+    ...(opts.totalTime ? { totalTime: opts.totalTime } : {}),
+    step: opts.steps.map((step, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: step.name,
+      text: step.text,
+      url: `${opts.url}#step-${i + 1}`,
+    })),
+  };
+}
+
+export function itemListJsonLd(items: { name: string; url: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: item.url,
+      name: item.name,
+    })),
   };
 }
