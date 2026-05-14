@@ -7,6 +7,7 @@ import {
   FaqSection,
   CtaSection,
   PopularGuides,
+  UpcomingFeaturesSection,
 } from '@/components/sections';
 import { PageStructuredData } from '@/components/structured-data';
 
@@ -52,6 +53,7 @@ export default function HomePage() {
       <FeaturesGrid />
       <CodeShowcase />
       <HowItWorks />
+      <UpcomingFeaturesSection />
       <PopularGuides />
       <FaqSection items={homeFaq} />
       <CtaSection />

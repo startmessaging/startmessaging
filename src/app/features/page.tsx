@@ -5,6 +5,7 @@ import {
   FeaturesGrid,
   ComparisonTable,
   CtaSection,
+  UpcomingFeaturesSection,
 } from '@/components/sections';
 import { PageStructuredData } from '@/components/structured-data';
 import {
@@ -86,6 +87,8 @@ export default function FeaturesPage() {
           </div>
         </div>
       </section>
+
+      <UpcomingFeaturesSection />
 
       <ComparisonTable />
 

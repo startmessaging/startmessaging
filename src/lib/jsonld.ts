@@ -114,6 +114,7 @@ export function siteNavigationJsonLd() {
     { name: "Bulk OTP API", url: `${SITE_URL}/bulk-otp-api` },
     { name: "Pricing", url: `${SITE_URL}/pricing` },
     { name: "Features", url: `${SITE_URL}/features` },
+    { name: "Video guides", url: `${SITE_URL}/videos` },
     { name: "Use Cases", url: `${SITE_URL}/use-cases` },
     { name: "API Limits", url: `${SITE_URL}/limits` },
     { name: "Blog", url: `${SITE_URL}/blog` },
@@ -292,5 +293,66 @@ export function itemListJsonLd(items: { name: string; url: string }[]) {
       url: item.url,
       name: item.name,
     })),
+  };
+}
+
+const publisherOrg = () => ({
+  "@type": "Organization" as const,
+  name: SITE_NAME,
+  url: SITE_URL,
+});
+
+/** YouTube-hosted tutorial; satisfies Google VideoObject required fields when used with real uploadDate/duration. */
+export function youtubeVideoObjectJsonLd(input: {
+  youtubeId: string;
+  name: string;
+  description: string;
+  thumbnailUrls: string[];
+  uploadDate: string;
+  durationIso8601: string;
+  embedUrl: string;
+  watchUrl: string;
+  /** Stable @id on our site (fragment) for graph references */
+  idFragment: string;
+}) {
+  const pageUrl = `${SITE_URL}/videos#${input.idFragment}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "@id": pageUrl,
+    name: input.name,
+    description: input.description,
+    thumbnailUrl: input.thumbnailUrls,
+    uploadDate: input.uploadDate,
+    duration: input.durationIso8601,
+    embedUrl: input.embedUrl,
+    url: input.watchUrl,
+    inLanguage: "en-IN",
+    isFamilyFriendly: true,
+    publisher: publisherOrg(),
+    creator: publisherOrg(),
+  };
+}
+
+export function videoGuidesWebPageJsonLd(opts: {
+  name: string;
+  description: string;
+  videoObjectIds: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/videos#webpage`,
+    url: `${SITE_URL}/videos`,
+    name: opts.name,
+    description: opts.description,
+    inLanguage: "en-IN",
+    isPartOf: {
+      "@type": "WebSite",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    publisher: publisherOrg(),
+    mainEntity: opts.videoObjectIds.map((id) => ({ "@id": id })),
   };
 }

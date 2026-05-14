@@ -37,6 +37,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/videos`,
+      changeFrequency: 'monthly',
+      priority: 0.72,
+    },
+    {
       url: `${BASE_URL}/pricing`,
       changeFrequency: 'monthly',
       priority: 0.85,

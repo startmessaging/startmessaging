@@ -10,3 +10,4 @@ export { HowItWorks } from './how-it-works';
 export { DltExplainer } from './dlt-explainer';
 export { UseCaseCards } from './use-case-cards';
 export { PopularGuides } from './popular-guides';
+export { UpcomingFeaturesSection } from './upcoming-features-section';

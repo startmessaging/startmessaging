@@ -1,17 +1,17 @@
-import { Check } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { DASHBOARD_URL } from '@/lib/constants';
+import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { DASHBOARD_URL } from "@/lib/constants";
 
 const included = [
-  'No monthly fees',
-  'No DLT registration',
-  'Unlimited API keys',
-  'Multi-provider failover',
-  'Real-time delivery tracking',
-  'Idempotent OTP sends',
-  'Wallet-based billing',
-  'Dashboard & analytics',
+  "No monthly fees",
+  "No DLT registration",
+  "Unlimited API keys",
+  "Multi-provider failover",
+  "Real-time delivery tracking",
+  "Idempotent OTP sends",
+  "Wallet-based billing",
+  "Dashboard & analytics",
 ];
 
 export function PricingSection() {
@@ -54,6 +54,22 @@ export function PricingSection() {
               </Button>
             </CardContent>
           </Card>
+        </div>
+
+        <div className="mx-auto max-w-2xl text-center pt-7">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Still have questions?
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            We&apos;re here to help. Contact us at{" "}
+            <a
+              href="mailto:support@startmessaging.com"
+              className="text-primary hover:underline"
+            >
+              support@startmessaging.com
+            </a>
+            . Maybe we can discuss more on your requirements.
+          </p>
         </div>
       </div>
     </section>

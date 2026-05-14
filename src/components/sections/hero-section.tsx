@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import { ArrowRight, Zap } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { DASHBOARD_URL } from '@/lib/constants';
-import { OtpIllustration } from '@/components/ui/otp-illustration';
+import Link from "next/link";
+import { ArrowRight, Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { DASHBOARD_URL } from "@/lib/constants";
+import { OtpIllustration } from "@/components/ui/otp-illustration";
 
 export function HeroSection() {
   return (
@@ -21,19 +21,20 @@ export function HeroSection() {
             </div>
 
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
-              <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
                 Send OTPs
-              </span>{' '}
-              Without{' '}
+              </span>{" "}
+              Without{" "}
               <span className="underline decoration-primary/50 decoration-4 underline-offset-8">
                 DLT Registration
               </span>
             </h1>
 
             <p className="mt-8 text-lg leading-8 text-muted-foreground sm:text-xl sm:leading-9">
-              The most developer-friendly OTP API for India. Authenticate users in minutes
-              with our high-delivery SMS infrastructure. 4-6 digit OTP support, 
-              multi-provider failover, and zero DLT registration — all at just ₹0.25 each.
+              The most developer-friendly OTP API for India. Authenticate users
+              in minutes with our high-delivery SMS infrastructure. 4-6 digit
+              OTP support, multi-provider failover, and zero DLT registration —
+              all at just ₹0.25 each.
             </p>
 
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
@@ -49,10 +50,14 @@ export function HeroSection() {
             </div>
 
             <p className="mt-4 text-sm text-muted-foreground">
-              Free to sign up. <span className="font-semibold text-foreground">40 test messages credited on signup.</span> Pay only for what you send.
+              Free to sign up.{" "}
+              <span className="font-semibold text-foreground">
+                40 test messages credited on signup.
+              </span>{" "}
+              Pay only for what you send.
             </p>
           </div>
-          
+
           {/* Right Column Illustration */}
           <div className="mx-auto w-full max-w-[500px] lg:max-w-none flex justify-center lg:justify-end">
             <OtpIllustration />

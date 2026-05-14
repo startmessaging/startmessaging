@@ -176,6 +176,11 @@ import { post as circuitBreakerPatternOtpServices } from './circuit-breaker-patt
 import { post as multiRegionFailoverOtpApi } from './multi-region-failover-otp-api';
 import { post as otpOutagePostmortemTemplate } from './otp-outage-postmortem-template';
 import { post as whatIsSmsTps } from './what-is-sms-tps';
+import { post as rcsRichMessagingOtpIndiaDevelopers } from './rcs-rich-messaging-otp-india-developers';
+import { post as esimDualSimOtpNotDeliveredIndia } from './esim-dual-sim-otp-not-delivered-india';
+import { post as passkeysWebauthnMigrationSmsOtpIndia } from './passkeys-webauthn-migration-sms-otp-india';
+import { post as digilockerEaadhaarKycFlowIndiaDevelopers } from './digilocker-eaadhaar-kyc-flow-india-developers';
+import { post as wifiCallingVowifiOtpDeliveryIndia } from './wifi-calling-vowifi-otp-delivery-india';
 
 const posts: BlogPost[] = [
   sendOtpNodejs,
@@ -350,6 +355,11 @@ const posts: BlogPost[] = [
   multiRegionFailoverOtpApi,
   otpOutagePostmortemTemplate,
   whatIsSmsTps,
+  rcsRichMessagingOtpIndiaDevelopers,
+  esimDualSimOtpNotDeliveredIndia,
+  passkeysWebauthnMigrationSmsOtpIndia,
+  digilockerEaadhaarKycFlowIndiaDevelopers,
+  wifiCallingVowifiOtpDeliveryIndia,
 ];
 
 // Sort by publishedAt descending (newest first)

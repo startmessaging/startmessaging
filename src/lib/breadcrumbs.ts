@@ -15,6 +15,7 @@ export const ROUTE_LABELS: Record<string, string> = {
   '/limits': 'API Limits',
   '/blog': 'Blog',
   '/refund-policy': 'Refund Policy',
+  '/videos': 'Video guides',
 };
 
 function humanizeSegment(segment: string): string {

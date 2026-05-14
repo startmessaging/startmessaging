@@ -1,3 +1,7 @@
+/** Custom roadmap and enterprise integrations (displayed on marketing pages). */
+export const CUSTOM_FEATURES_REQUEST_EMAIL = "startmessagingdotcom@gmail.com";
+export const CUSTOM_FEATURES_REQUEST_MAILTO = `mailto:${CUSTOM_FEATURES_REQUEST_EMAIL}?subject=${encodeURIComponent("Custom feature request — StartMessaging")}`;
+
 export const WHATSAPP_NUMBER = "916376383348";
 export const WHATSAPP_MESSAGE = "Hi, I need help with StartMessaging";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
@@ -8,6 +12,7 @@ export const API_DOCS_URL = "https://api.startmessaging.com/api/docs";
 
 export const NAV_LINKS = [
   { href: "/features", label: "Features" },
+  { href: "/videos", label: "Videos" },
   { href: "/pricing", label: "Pricing" },
   { href: "/dlt-free-otp", label: "DLT Free OTP" },
   { href: "/otp-api", label: "API Docs" },
@@ -19,6 +24,7 @@ export const NAV_LINKS = [
 export const FOOTER_LINKS = {
   product: [
     { href: "/features", label: "Features" },
+    { href: "/videos", label: "Video guides" },
     { href: "/pricing", label: "Pricing" },
     { href: "/otp-api", label: "API Documentation" },
     { href: "/use-cases", label: "Use Cases" },
